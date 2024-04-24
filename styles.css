@@ -660,3 +660,33 @@ footer img {
     }
 
 }
+
+@media print {
+    body {
+      margin: 0.5in; 
+      font-family: serif; 
+    }
+  
+    nav, menu {
+      display: none; 
+    }
+  
+    img {
+      display: none; 
+    }
+  
+    a::after {
+      content: " (" attr(href) ")"; 
+    }
+  
+    @page {
+      size: auto;
+      margin: 0.5in; 
+    }
+  
+    body {
+      page-break-after: avoid; 
+    }
+  }
+  
+
